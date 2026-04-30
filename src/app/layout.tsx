@@ -1,4 +1,5 @@
 import Providers from "./providers"
+import "./globals.css"
 
 export const metadata = {
   title: "Innovation Brindes",
@@ -12,7 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <body>
+      <body className="bg-white text-black">
         <Providers>{children}</Providers>
       </body>
     </html>
