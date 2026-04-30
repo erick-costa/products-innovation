@@ -10,7 +10,7 @@ export default function LoginPage() {
   const [senha, setSenha] = useState("")
   const [error, setError] = useState("")
 
-  const setToken = useAuthStore((state) => state.setToken)
+  const setAuth = useAuthStore((state) => state.setAuth)
 
   const router = useRouter()
 
@@ -18,9 +18,7 @@ export default function LoginPage() {
     try {
       const data = await login(email, senha)
 
-      console.log("response:", data)
-
-      setToken(data.token_de_acesso)
+      setAuth(data.token_de_acesso, data.dados_usuario)
 
       document.cookie = `token=${data.token_de_acesso}`
 
@@ -62,13 +60,7 @@ export default function LoginPage() {
 
           {error && <p className="text-red-500 text-sm">{error}</p>}
 
-          <button
-            type="submit"
-            // onClick={() => {
-            //   console.log("clicou")
-            // }}
-            className="w-full bg-black text-white p-2"
-          >
+          <button type="submit" className="w-full bg-black text-white p-2">
             Entrar
           </button>
         </form>
