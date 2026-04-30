@@ -1,7 +1,13 @@
+import { LoginResponse } from "@/types/auth"
+import { Product } from "@/types/product"
+
 const BASE_URL =
   "https://apihomolog.innovationbrindes.com.br/api/innova-dinamica"
 
-export async function login(email: string, senha: string) {
+export async function login(
+  email: string,
+  senha: string,
+): Promise<LoginResponse> {
   const res = await fetch(`${BASE_URL}/login/acessar`, {
     method: "POST",
     headers: {
@@ -10,7 +16,7 @@ export async function login(email: string, senha: string) {
     body: JSON.stringify({ email, senha }),
   })
 
-  const data = await res.json()
+  const data: LoginResponse = await res.json()
 
   if (data.status === "0") {
     throw new Error(data.message)
@@ -19,7 +25,7 @@ export async function login(email: string, senha: string) {
   return data
 }
 
-export async function getProducts(token: string) {
+export async function getProducts(token: string): Promise<Product[]> {
   const res = await fetch(`${BASE_URL}/produtos/listar`, {
     headers: {
       Authorization: `Bearer ${token}`,

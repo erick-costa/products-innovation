@@ -24,9 +24,13 @@ export default function LoginPage() {
 
       document.cookie = `token=${data.token_de_acesso}`
 
-      router.push("/produtos")
-    } catch (err: any) {
-      setError(err.message)
+      router.push("/products")
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        setError(err.message)
+      } else {
+        setError("Erro inesperado")
+      }
     }
   }
 
