@@ -2,6 +2,11 @@
 
 Aplicação desenvolvida com Next.js para autenticação e listagem de produtos, consumindo API externa com token Bearer.
 
+<img width="600" alt="Captura de Tela 2026-05-01 às 17 19 50" src="https://github.com/user-attachments/assets/9763339a-47d2-4b97-bf5d-85db0aa5f40f" />
+
+
+<img width="600" alt="Captura de Tela 2026-05-01 às 17 20 34" src="https://github.com/user-attachments/assets/1154d8d9-09fb-44db-8ece-2454c0bd9621" />
+
 ---
 
 ## 🚀 Tecnologias
