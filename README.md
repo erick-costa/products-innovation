@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛍️ Innovation Products – Next.js
 
-## Getting Started
+Aplicação desenvolvida com Next.js para autenticação e listagem de produtos, consumindo API externa com token Bearer.
 
-First, run the development server:
+---
+
+## 🚀 Tecnologias
+
+- Next.js (App Router)
+- TypeScript
+- Tailwind CSS
+- Zustand (estado global)
+- React Query (cache e requisições)
+- Radix UI (modal acessível)
+- Docker
+
+---
+
+## ⚙️ Como rodar o projeto
+
+### 🔧 Rodando localmente
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Acesse: http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 🐳 Rodando com Docker
 
-## Learn More
+```bash
+docker build -t products-app .
+docker run -p 3000:3000 products-app
+```
 
-To learn more about Next.js, take a look at the following resources:
+Acesse: http://localhost:3000
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🔐 Autenticação
 
-## Deploy on Vercel
+- Login via API
+- Token salvo e utilizado nas requisições
+- Rotas protegidas com middleware
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📦 Funcionalidades
+
+- Login com tratamento de erro
+- Listagem de produtos em grid responsivo
+- Busca com debounce
+- Ordenação por nome e preço
+- Infinite scroll (simulado no client)
+- Modal de produto acessível
+- Favoritos com persistência (localStorage)
+- Filtro de favoritos
+- Loading (skeleton e estados de carregamento)
+
+---
+
+## ⚠️ Observações técnicas
+
+- A API não possui paginação, então o infinite scroll foi implementado no client, carregando todos os dados inicialmente e exibindo incrementalmente.
+- O estado global foi gerenciado com Zustand.
+
+---
+
+## 📊 Qualidade
+
+- Código organizado e componentizado
+- Separação de responsabilidades
+- Acessibilidade básica aplicada
+
+---
+
+## 📌 Melhorias futuras
+
+- Testes unitários e E2E
+- Melhor tratamento de erros (retry/backoff)
+- Skeleton mais refinado
+
+---
