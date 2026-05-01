@@ -23,36 +23,20 @@ export default function Header() {
         <div className="flex items-center gap-4">
           <button
             aria-label="Telefone"
-            className="
-              p-2
-              rounded-full
-              hover:bg-gray-100
-              transition
-            "
+            className="p-2 rounded-full hover:bg-gray-100 transition"
           >
             <Phone className="w-5 h-5 text-white" />
           </button>
 
           <button
             aria-label="Email"
-            className="
-              p-2
-              rounded-full
-              hover:bg-gray-100
-              transition
-            "
+            className="p-2 rounded-full hover:bg-gray-100 transition"
           >
             <Mail className="w-5 h-5 text-white" />
           </button>
 
           <div className="flex items-center gap-2">
-            <div
-              className="
-                p-2
-                rounded-full
-                bg-gray-100
-              "
-            >
+            <div className="p-2 rounded-full bg-gray-100">
               <User className="w-5 h-5 text-gray-700" />
             </div>
 
