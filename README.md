@@ -4,7 +4,6 @@ Aplicação desenvolvida com Next.js para autenticação e listagem de produtos,
 
 <img width="600" alt="Captura de Tela 2026-05-01 às 17 19 50" src="https://github.com/user-attachments/assets/9763339a-47d2-4b97-bf5d-85db0aa5f40f" />
 
-
 <img width="600" alt="Captura de Tela 2026-05-01 às 17 20 34" src="https://github.com/user-attachments/assets/1154d8d9-09fb-44db-8ece-2454c0bd9621" />
 
 ---
@@ -78,14 +77,14 @@ Acesse: http://localhost:3000
 
 - Código organizado e componentizado
 - Separação de responsabilidades
-- Acessibilidade básica aplicada
+- Facilidade de manutenção
 
 ---
 
 ## 📌 Melhorias futuras
 
-- Testes unitários e E2E
-- Melhor tratamento de erros (retry/backoff)
-- Skeleton mais refinado
+- Testes unitários
+- Busca com debounce
+- - Ordenação por preço
 
 ---
